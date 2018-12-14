@@ -36,7 +36,7 @@ services:
 # 使用
 * 下载
 ```
-git clone git@github.com:FengGeSe/docker-compose-mysql.git
+git clone git@github.com:FengGeSe/docker-compose-mysql.git  &&  cd docker-compose-mysql  && rm -rf .git
 ```
 * 启动
 ```
