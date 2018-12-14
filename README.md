@@ -1,3 +1,21 @@
+# 介绍
+使用官方mysql:5.7镜像，将配置，数据，日志挂载到宿主机。
+docker-compose.yaml
+```
+version: '2'
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 3306:3306/tcp
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+    volumes:
+      - ./mysql/conf.d:/etc/mysql/conf.d
+      - ./mysql/mysql.conf.d:/etc/mysql/mysql.conf.d
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/log:/var/log/mysql
+```
 # 文件目录
 * README.md 
 * docker-compose.yaml   // 定义了mysql容器启动参数
