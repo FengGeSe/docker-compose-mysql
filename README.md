@@ -7,6 +7,7 @@ version: '2'
 services:
   mysql:
     image: mysql:5.7
+    container_name: mysql
     ports:
       - 3306:3306/tcp
     environment:
@@ -34,8 +35,14 @@ services:
             * mysqld.cnf
 # 使用
 * 下载
-```git clone ```
+```
+git clone git@github.com:FengGeSe/docker-compose-mysql.git
+```
 * 启动
-```docker-compose up -d```
+```
+docker-compose up -d
+```
 * 查看
-```docker ps | grep mysql```
+```
+docker ps | grep mysql
+```

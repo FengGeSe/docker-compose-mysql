@@ -2,11 +2,11 @@ version: '2'
 services:
   mysql:
     image: mysql:5.7
+    container_name: mysql
     ports:
       - 3306:3306/tcp
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=bookinfo
+      - MYSQL_ROOT_PASSWORD=123456
     volumes:
       - ./mysql/conf.d:/etc/mysql/conf.d
       - ./mysql/mysql.conf.d:/etc/mysql/mysql.conf.d
