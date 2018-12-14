@@ -32,3 +32,10 @@ services:
             * mysql.log      // 文件权限 -rwxr-xr-x  否则写如不了日志
     * mysql.conf.d    // 挂载到容器中  /etc/mysql/mysql.conf.d
             * mysqld.cnf
+# 使用
+* 下载
+```git clone ```
+* 启动
+```docker-compose up -d```
+* 查看
+```docker ps | grep mysql```
