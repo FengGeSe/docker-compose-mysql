@@ -50,3 +50,19 @@ docker ps | grep mysql
 ```
 mysql -uroot -h127.0.0.1 -P3306 -p123456
 ```
+
+创建用户
+
+```
+CREATE USER 'username'@'%' IDENTIFIED BY 'password';
+```
+
+```
+flush privileges;
+```
+
+```
+GRANT ALL ON *.* TO 'username'@'%';
+```
+
+
